@@ -1,23 +1,23 @@
-<!-- ISSUE: Root-relative asset/navigation links (/assets/..., /news/) return 404 on GitHub Pages subpaths. -->
-<!-- CORRECTION: Wrap stylesheets, scripts, and internal routes in Eleventy | url filter for subpath support. -->
+<!-- ISSUE: Double pathPrefix bug where Eleventy 3 HTML transformer and | url filter both prepended /news-zero/. -->
+<!-- CORRECTION: Use root-relative URLs so Eleventy pathPrefix transforms them once to /news-zero/... -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Twice-Daily Trends — ttraces.io</title>
-  <link rel="stylesheet" href="/news-zero/news-zero/assets/css/style.css">
-  <script src="/news-zero/news-zero/assets/js/app.js" defer=""></script>
+  <link rel="stylesheet" href="/news-zero/assets/css/style.css">
+  <script src="/news-zero/assets/js/app.js" defer=""></script>
 </head>
 <body>
   <header>
     <a href="/news-zero/" class="wordmark">ttraces<span>.io</span></a>
     <nav>
       <a href="/news-zero/">FEED</a>
-      <a href="/news-zero/news-zero/news/">NEWS</a>
-      <a href="/news-zero/news-zero/research/">RESEARCH</a>
-      <a href="/news-zero/news-zero/trends/" class="active">TRENDS</a>
-      <a href="/news-zero/news-zero/privacy/">PRIVACY</a>
+      <a href="/news-zero/news/">NEWS</a>
+      <a href="/news-zero/research/">RESEARCH</a>
+      <a href="/news-zero/trends/" class="active">TRENDS</a>
+      <a href="/news-zero/privacy/">PRIVACY</a>
     </nav>
   </header>
 
@@ -31,8 +31,8 @@
       <h2>Top Cybersecurity News</h2>
       <div class="card-grid">
         
-          <!-- ISSUE: Hardcoded /s/ shortlink paths break on GitHub Pages subpaths. -->
-<!-- CORRECTION: Wrap shortlink redirect URL in Eleventy | url filter for subpath support. -->
+          <!-- ISSUE: Double pathPrefix bug on shortlink URLs when using | url filter. -->
+<!-- CORRECTION: Use root-relative /s/shortId/ URL so Eleventy pathPrefix transforms it once. -->
 <div class="card" data-category="vulnerability-management" data-country="US">
   <div class="card-header">
     <span class="card-tag brand-label">vulnerability-management</span>
@@ -42,13 +42,13 @@
   <p class="card-excerpt">Source: CISA (US)</p>
   <div class="card-meta">
     <span class="brand-hash">#cisa001a2b3c4d</span>
-    <a href="/news-zero/news-zero/s/cisa0001/" class="btn">SHARE LINK</a>
+    <a href="/news-zero/s/cisa0001/" class="btn">SHARE LINK</a>
   </div>
 </div>
 
         
-          <!-- ISSUE: Hardcoded /s/ shortlink paths break on GitHub Pages subpaths. -->
-<!-- CORRECTION: Wrap shortlink redirect URL in Eleventy | url filter for subpath support. -->
+          <!-- ISSUE: Double pathPrefix bug on shortlink URLs when using | url filter. -->
+<!-- CORRECTION: Use root-relative /s/shortId/ URL so Eleventy pathPrefix transforms it once. -->
 <div class="card" data-category="open-source-security" data-country="Global">
   <div class="card-header">
     <span class="card-tag brand-label">open-source-security</span>
@@ -58,7 +58,7 @@
   <p class="card-excerpt">Source: GitHub (Global)</p>
   <div class="card-meta">
     <span class="brand-hash">#ghsec001e2f3g4</span>
-    <a href="/news-zero/news-zero/s/ghsec001/" class="btn">SHARE LINK</a>
+    <a href="/news-zero/s/ghsec001/" class="btn">SHARE LINK</a>
   </div>
 </div>
 
@@ -68,8 +68,8 @@
       <h2 style="margin-top: 48px;">Top Open Research Papers</h2>
       <div class="card-grid">
         
-          <!-- ISSUE: Hardcoded /s/ shortlink paths break on GitHub Pages subpaths. -->
-<!-- CORRECTION: Wrap shortlink redirect URL in Eleventy | url filter for subpath support. -->
+          <!-- ISSUE: Double pathPrefix bug on paper shortlink URLs when using | url filter. -->
+<!-- CORRECTION: Use root-relative /s/shortId/ URL so Eleventy pathPrefix transforms it once. -->
 <div class="card" data-category="cryptography" data-country="Global">
   <div class="card-header">
     <span class="card-tag brand-label">cryptography</span>
@@ -79,7 +79,7 @@
   <p class="card-excerpt">Formal verification model for post-quantum lattice-based key exchange mechanisms against side-channel adversaries.</p>
   <div class="card-meta">
     <span class="brand-hash">arXiv cs.CR</span>
-    <a href="/news-zero/news-zero/s/arx00001/" class="btn">PDF / PAPER</a>
+    <a href="/news-zero/s/arx00001/" class="btn">PDF / PAPER</a>
   </div>
 </div>
 

@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Output builds
+_site/
+
+# Test results & cache
+test-results/
+playwright-report/
+.gstack/
+.cache/
+
+# System files
+.DS_Store
+Thumbs.db
