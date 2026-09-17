@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cisa-advisories",
+    "name": "CISA Cybersecurity Advisories",
+    "country": "US",
+    "sourceType": "government",
+    "homepage": "https://www.cisa.gov/news-events/cybersecurity-advisories",
+    "topics": ["vulnerability-management", "critical-infrastructure"],
+    "category": "vulnerability-management",
+    "publicationDate": "2026-09-17",
+    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories",
+    "publisher": "CISA",
+    "contentHash": "cisa001a2b3c4d",
+    "shortId": "cisa0001"
+  },
+  {
+    "id": "github-blog-security",
+    "name": "GitHub Security Disclosures",
+    "country": "Global",
+    "sourceType": "vendor",
+    "homepage": "https://github.blog/category/security/",
+    "topics": ["open-source-security", "supply-chain-security"],
+    "category": "open-source-security",
+    "publicationDate": "2026-09-16",
+    "url": "https://github.blog/category/security/",
+    "publisher": "GitHub",
+    "contentHash": "ghsec001e2f3g4",
+    "shortId": "ghsec001"
+  }
+]

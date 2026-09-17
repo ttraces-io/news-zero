@@ -1,0 +1,12 @@
+<div class="card" data-domain="{{ item.domain }}" data-country="{{ item.country }}">
+  <div class="card-header">
+    <span class="card-tag brand-label">{{ item.sourceType }}</span>
+    <span class="card-date">{{ item.country }}</span>
+  </div>
+  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="card-title">{{ item.title }}</a>
+  <p class="card-excerpt">{{ item.description }}</p>
+  <div class="card-meta">
+    <span class="brand-hash">{{ item.domain }}</span>
+    <button class="btn btn-like" onclick="toggleLike('{{ item.shortId }}')" id="like-{{ item.shortId }}">LIKE</button>
+  </div>
+</div>

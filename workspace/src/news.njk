@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Feed — ttraces.io</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="/" class="wordmark">ttraces<span>.io</span></a>
+    <nav>
+      <a href="/">FEED</a>
+      <a href="/news/" class="active">NEWS</a>
+      <a href="/research/">RESEARCH</a>
+      <a href="/trends/">TRENDS</a>
+      <a href="/privacy/">PRIVACY</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <span class="brand-label">VERIFIED SOURCES</span>
+      <h1 style="margin-top: 8px;">Cybersecurity News & Advisories</h1>
+
+      <div class="route-line"></div>
+
+      {% include "filter-controls.njk" %}
+
+      <div class="card-grid">
+        {% for item in newsPlatforms %}
+          {% include "news-card.njk" %}
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>TTRACES.IO — BRAND SYSTEM V1.0 · ZERO-TRACKING PUBLIC FEED</div>
+  </footer>
+</body>
+</html>

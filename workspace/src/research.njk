@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Papers — ttraces.io</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="/" class="wordmark">ttraces<span>.io</span></a>
+    <nav>
+      <a href="/">FEED</a>
+      <a href="/news/">NEWS</a>
+      <a href="/research/" class="active">RESEARCH</a>
+      <a href="/trends/">TRENDS</a>
+      <a href="/privacy/">PRIVACY</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <span class="brand-label">OPEN ACCESS PAPERS</span>
+      <h1 style="margin-top: 8px;">Security Research Registry</h1>
+
+      <div class="route-line"></div>
+
+      <div class="card-grid">
+        {% for paper in researchPapers %}
+          {% include "paper-card.njk" %}
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>TTRACES.IO — BRAND SYSTEM V1.0 · ZERO-TRACKING PUBLIC FEED</div>
+  </footer>
+</body>
+</html>

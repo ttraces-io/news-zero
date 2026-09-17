@@ -1,0 +1,32 @@
+[
+  {
+    "id": "arxiv-cs-cr-001",
+    "title": "Formal Verification of Post-Quantum Cryptographic Protocols",
+    "authors": ["Dr. Alice Vance", "Dr. Bob Miller"],
+    "publisher": "arXiv cs.CR",
+    "publicationDate": "2026-09-10",
+    "url": "https://arxiv.org/abs/2609.00123",
+    "doi": "10.48550/arXiv.2609.00123",
+    "abstract": "We present a formal security verification model for post-quantum lattice-based key exchange mechanisms against side-channel adversaries.",
+    "topics": ["cryptography", "security-research"],
+    "country": "Global",
+    "openAccess": true,
+    "contentHash": "a1b2c3d4e5f60789",
+    "status": "active"
+  },
+  {
+    "id": "iacr-e-print-002",
+    "title": "Zero-Trust Architecture in Distributed Cloud Fabrics",
+    "authors": ["Elena Rostova", "Marcus Chen"],
+    "publisher": "IACR Cryptology ePrint Archive",
+    "publicationDate": "2026-09-01",
+    "url": "https://eprint.iacr.org/2026/987",
+    "doi": null,
+    "abstract": "Analysis of zero-trust policy enforcement latency and cryptographic identity attestation in multi-cloud Kubernetes clusters.",
+    "topics": ["zero-trust", "cloud-security"],
+    "country": "Global",
+    "openAccess": true,
+    "contentHash": "f9e8d7c6b5a40123",
+    "status": "active"
+  }
+]

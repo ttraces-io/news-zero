@@ -1,0 +1,12 @@
+<div class="card" data-category="{{ paper.topics[0] }}" data-country="{{ paper.country }}">
+  <div class="card-header">
+    <span class="card-tag brand-label">{{ paper.topics[0] }}</span>
+    <span class="card-date">{{ paper.publicationDate }}</span>
+  </div>
+  <a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer" class="card-title">{{ paper.title }}</a>
+  <p class="card-excerpt">{{ paper.abstract }}</p>
+  <div class="card-meta">
+    <span class="brand-hash">{{ paper.publisher }}</span>
+    <a href="/s/{{ paper.shortId }}/" class="btn">PDF / PAPER</a>
+  </div>
+</div>

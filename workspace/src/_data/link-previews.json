@@ -1,0 +1,17 @@
+[
+  {
+    "title": "GitHub: Let's build from here",
+    "url": "https://github.com/",
+    "domain": "github.com",
+    "description": "GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories, and secure your software supply chain.",
+    "image": null,
+    "topics": [
+      "open-source-security",
+      "software-development"
+    ],
+    "sourceType": "platform",
+    "country": "Global",
+    "publicationDate": "2026-09-17",
+    "shortId": "gh000001"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cisa-advisories",
+    "name": "CISA Cybersecurity Advisories",
+    "country": "US",
+    "sourceType": "government",
+    "homepage": "https://www.cisa.gov/news-events/cybersecurity-advisories",
+    "feedUrls": ["https://www.cisa.gov/cybersecurity-advisories/all.xml"],
+    "articleUrlPatterns": ["^https://www.cisa.gov/news-events/cybersecurity-advisories/"],
+    "topics": ["vulnerability-management", "critical-infrastructure"],
+    "languages": ["en"],
+    "enabled": true,
+    "reputationStatus": "approved",
+    "lastValidatedAt": "2026-09-17T12:00:00Z",
+    "notes": "Official US CISA alerts and advisories"
+  },
+  {
+    "id": "ncsc-uk",
+    "name": "UK NCSC Advisories",
+    "country": "GB",
+    "sourceType": "government",
+    "homepage": "https://www.ncsc.gov.uk/section/keep-up-to-date/reports-guidance",
+    "feedUrls": ["https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml"],
+    "articleUrlPatterns": ["^https://www.ncsc.gov.uk/"],
+    "topics": ["cybersecurity", "threat-intelligence"],
+    "languages": ["en"],
+    "enabled": true,
+    "reputationStatus": "approved",
+    "lastValidatedAt": "2026-09-17T12:00:00Z",
+    "notes": "UK National Cyber Security Centre public alerts"
+  },
+  {
+    "id": "cert-fr",
+    "name": "CERT-FR Advisories",
+    "country": "FR",
+    "sourceType": "cert",
+    "homepage": "https://www.cert.ssi.gouv.fr/",
+    "feedUrls": ["https://www.cert.ssi.gouv.fr/feed/"],
+    "articleUrlPatterns": ["^https://www.cert.ssi.gouv.fr/avis/"],
+    "topics": ["vulnerability-management", "incident-response"],
+    "languages": ["fr", "en"],
+    "enabled": true,
+    "reputationStatus": "approved",
+    "lastValidatedAt": "2026-09-17T12:00:00Z",
+    "notes": "French National Cybersecurity Agency CERT alerts"
+  },
+  {
+    "id": "github-blog-security",
+    "name": "GitHub Security Blog",
+    "country": "Global",
+    "sourceType": "vendor",
+    "homepage": "https://github.blog/category/security/",
+    "feedUrls": ["https://github.blog/category/security/feed/"],
+    "articleUrlPatterns": ["^https://github.blog/"],
+    "topics": ["supply-chain-security", "open-source-security"],
+    "languages": ["en"],
+    "enabled": true,
+    "reputationStatus": "approved",
+    "lastValidatedAt": "2026-09-17T12:00:00Z",
+    "notes": "GitHub technical security disclosures and open source safety"
+  }
+]

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ttraces.io — Cybersecurity Intelligence Feed</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="/" class="wordmark">ttraces<span>.io</span></a>
+    <nav>
+      <a href="/" class="active">FEED</a>
+      <a href="/news/">NEWS</a>
+      <a href="/research/">RESEARCH</a>
+      <a href="/trends/">TRENDS</a>
+      <a href="/privacy/">PRIVACY</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <span class="brand-label">CYBERSECURITY INTELLIGENCE PIPELINE</span>
+      <h1 style="margin-top: 8px;">Follow the threat to its terminus</h1>
+      <p style="color: var(--color-path-grey); max-width: 680px; margin-bottom: 24px;">
+        Zero-tracking, 60-day freshness verified news aggregation and open-access security research paper registry.
+      </p>
+
+      <div class="route-line"></div>
+
+      {% include "filter-controls.njk" %}
+
+      <h2>Seed Link Previews & Validated Sources</h2>
+      <div class="card-grid">
+        {% for item in linkPreviews %}
+          {% include "link-card.njk" %}
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>TTRACES.IO — BRAND SYSTEM V1.0 · ZERO-TRACKING PUBLIC FEED</div>
+    <div>SIGNAL GREEN: #4ED589</div>
+  </footer>
+</body>
+</html>

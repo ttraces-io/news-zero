@@ -1,0 +1,238 @@
+/* ttraces.io Brand System CSS */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root {
+  /* Brand Palette */
+  --color-signal-green: #4ED589;
+  --color-void: #06080B;
+  --color-substrate: #101316;
+  --color-wire: #25292E;
+  --color-path-grey: #7D8792;
+  --color-paper: #E9EBEE;
+  --color-alert-red: #BD413F;
+
+  /* Typography */
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0px !important; /* Strict Brand Rule: 0px border-radius everywhere */
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Monospaced Labels & Data */
+.brand-label, .card-tag, .nav-link, .brand-hash, .btn {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+}
+
+/* Header & Navigation */
+header {
+  background-color: var(--color-void);
+  border-bottom: 1px solid var(--color-wire);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wordmark {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-paper);
+  text-decoration: none;
+}
+
+.wordmark span {
+  color: var(--color-signal-green);
+}
+
+nav a {
+  color: var(--color-path-grey);
+  text-decoration: none;
+  margin-left: 24px;
+  transition: color 0.15s ease;
+}
+
+nav a:hover, nav a.active {
+  color: var(--color-signal-green);
+}
+
+/* Main Layout Grid */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+  color: var(--color-paper);
+  margin-bottom: 16px;
+  letter-spacing: -0.015em;
+}
+
+h1 { font-size: 32px; line-height: 1.2; }
+h2 { font-size: 24px; line-height: 1.3; }
+
+/* Substrate Card Panels */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.card {
+  background-color: var(--color-substrate);
+  border: 1px solid var(--color-wire);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-paper);
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.card-title:hover {
+  color: var(--color-signal-green);
+}
+
+.card-excerpt {
+  color: var(--color-path-grey);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.card-meta {
+  border-top: 1px solid var(--color-wire);
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-tag {
+  color: var(--color-signal-green);
+}
+
+.card-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-path-grey);
+}
+
+/* Filter Controls */
+.filter-bar {
+  background-color: var(--color-substrate);
+  border: 1px solid var(--color-wire);
+  padding: 16px 24px;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+select, input[type="text"] {
+  background-color: var(--color-void);
+  border: 1px solid var(--color-wire);
+  color: var(--color-paper);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+select:focus, input[type="text"]:focus {
+  outline: 1px solid var(--color-signal-green);
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--color-wire);
+  color: var(--color-paper);
+  border: 1px solid var(--color-wire);
+  padding: 8px 16px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: var(--color-substrate);
+  border-color: var(--color-signal-green);
+  color: var(--color-signal-green);
+}
+
+.btn-primary {
+  background-color: var(--color-signal-green);
+  color: var(--color-void);
+  font-weight: 600;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #3cb873;
+  color: var(--color-void);
+}
+
+/* Orthogonal Linework Decorator */
+.route-line {
+  height: 2px;
+  background-color: var(--color-wire);
+  position: relative;
+  margin: 32px 0;
+}
+
+.route-line::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-signal-green);
+  border-radius: 50% !important; /* Node exception */
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--color-wire);
+  padding: 32px 40px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-path-grey);
+}

@@ -1,0 +1,12 @@
+<div class="card" data-category="{{ item.category }}" data-country="{{ item.country }}">
+  <div class="card-header">
+    <span class="card-tag brand-label">{{ item.category }}</span>
+    <span class="card-date">{{ item.publicationDate }}</span>
+  </div>
+  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="card-title">{{ item.title }}</a>
+  <p class="card-excerpt">Source: {{ item.publisher }} ({{ item.country }})</p>
+  <div class="card-meta">
+    <span class="brand-hash">#{{ item.contentHash }}</span>
+    <a href="/s/{{ item.shortId }}/" class="btn">SHARE LINK</a>
+  </div>
+</div>

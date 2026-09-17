@@ -1,0 +1,16 @@
+[
+  {
+    "id": "rejected-spam-blog-1",
+    "name": "Generic Tech News Farm",
+    "homepage": "https://example-spam-tech.biz/",
+    "rejectionReason": "Scraper farm without original cybersecurity reporting",
+    "rejectedAt": "2026-09-15T10:00:00Z"
+  },
+  {
+    "id": "rejected-ad-tracker-2",
+    "name": "Ad-Heavy Security Aggregator",
+    "homepage": "https://example-ad-track.com/",
+    "rejectionReason": "Intrusive tracking scripts and deceptive affiliate links",
+    "rejectedAt": "2026-09-14T08:30:00Z"
+  }
+]

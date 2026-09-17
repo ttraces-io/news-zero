@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twice-Daily Trends — ttraces.io</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="/" class="wordmark">ttraces<span>.io</span></a>
+    <nav>
+      <a href="/">FEED</a>
+      <a href="/news/">NEWS</a>
+      <a href="/research/">RESEARCH</a>
+      <a href="/trends/" class="active">TRENDS</a>
+      <a href="/privacy/">PRIVACY</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <span class="brand-label">AUTOMATED TWICE-DAILY DIGEST (00:00 & 12:00 UTC)</span>
+      <h1 style="margin-top: 8px;">Top 10 News & Top 5 Research Papers</h1>
+
+      <div class="route-line"></div>
+
+      <h2>Top Cybersecurity News</h2>
+      <div class="card-grid">
+        {% for item in newsPlatforms | limit(10) %}
+          {% include "news-card.njk" %}
+        {% endfor %}
+      </div>
+
+      <h2 style="margin-top: 48px;">Top Open Research Papers</h2>
+      <div class="card-grid">
+        {% for paper in researchPapers | limit(5) %}
+          {% include "paper-card.njk" %}
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>TTRACES.IO — BRAND SYSTEM V1.0 · ZERO-TRACKING PUBLIC FEED</div>
+  </footer>
+</body>
+</html>
