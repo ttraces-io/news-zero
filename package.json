@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy",
+    "build": "npx @11ty/eleventy",
     "test": "node --test tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern _site",
     "scout:news": "node scripts/fetch-feeds.mjs --type=news",
