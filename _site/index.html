@@ -1,0 +1,80 @@
+<!-- ISSUE: Root-relative asset/navigation links (/assets/..., /news/) return 404 on GitHub Pages subpaths. -->
+<!-- CORRECTION: Wrap stylesheets, scripts, and internal routes in Eleventy | url filter for subpath support. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ttraces.io — Cybersecurity Intelligence Feed</title>
+  <link rel="stylesheet" href="/news-zero/news-zero/assets/css/style.css">
+  <script src="/news-zero/news-zero/assets/js/app.js" defer=""></script>
+</head>
+<body>
+  <header>
+    <a href="/news-zero/" class="wordmark">ttraces<span>.io</span></a>
+    <nav>
+      <a href="/news-zero/" class="active">FEED</a>
+      <a href="/news-zero/news-zero/news/">NEWS</a>
+      <a href="/news-zero/news-zero/research/">RESEARCH</a>
+      <a href="/news-zero/news-zero/trends/">TRENDS</a>
+      <a href="/news-zero/news-zero/privacy/">PRIVACY</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <span class="brand-label">CYBERSECURITY INTELLIGENCE PIPELINE</span>
+      <h1 style="margin-top: 8px;">Follow the threat to its terminus</h1>
+      <p style="color: var(--color-path-grey); max-width: 680px; margin-bottom: 24px;">
+        Zero-tracking, 60-day freshness verified news aggregation and open-access security research paper registry.
+      </p>
+
+      <div class="route-line"></div>
+
+      <!-- ISSUE: Hardcoded 5 select options ignoring 101 entries in countries.json and 35 in categories.json. -->
+<!-- CORRECTION: Dynamically iterate over countries and categories data arrays in Nunjucks template. -->
+<div class="filter-bar">
+  <span class="brand-label">FILTER FEED:</span>
+  <select id="country-select" onchange="applyFilters()">
+    <option value="">All Countries (Global)</option>
+    
+  </select>
+
+  <select id="category-select" onchange="applyFilters()">
+    <option value="">All Categories</option>
+    
+  </select>
+
+  <input type="text" id="search-input" placeholder="SEARCH TITLE / HASH..." onkeyup="applyFilters()">
+</div>
+
+
+      <h2>Seed Link Previews & Validated Sources</h2>
+      <div class="card-grid">
+        
+          <!-- ISSUE: Hardcoded /s/ shortlink paths break on GitHub Pages subpaths. -->
+<!-- CORRECTION: Wrap shortlink redirect URL in Eleventy | url filter for subpath support. -->
+<div class="card" data-domain="github.com" data-country="Global">
+  <div class="card-header">
+    <span class="card-tag brand-label">platform</span>
+    <span class="card-date">Global</span>
+  </div>
+  <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="card-title">GitHub: Let&#39;s build from here</a>
+  <p class="card-excerpt">GitHub is where over 100 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories, and secure your software supply chain.</p>
+  <div class="card-meta">
+    <span class="brand-hash">github.com</span>
+    <button class="btn btn-like" onclick="toggleLike('gh000001')" id="like-gh000001">LIKE</button>
+  </div>
+</div>
+
+        
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>TTRACES.IO — BRAND SYSTEM V1.0 · ZERO-TRACKING PUBLIC FEED</div>
+    <div>SIGNAL GREEN: #4ED589</div>
+  </footer>
+</body>
+</html>

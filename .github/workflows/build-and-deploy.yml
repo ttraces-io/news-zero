@@ -1,3 +1,5 @@
+# ISSUE: Workflow omitted pre-build feed fetching and PATH_PREFIX env var, breaking GitHub Pages asset links.
+# CORRECTION: Add pre-build scout ingestion, shortlink generation, and explicit PATH_PREFIX env var.
 name: Build and Deploy Static Feed
 
 on:
@@ -36,7 +38,12 @@ jobs:
       - name: Run Tests
         run: npm test
 
+      - name: Fetch Feeds & Pre-Populate Registries
+        run: node scripts/fetch-feeds.mjs
+
       - name: Build Eleventy Static Site
+        env:
+          PATH_PREFIX: "/news-zero/"
         run: npm run build
 
       - name: Generate Static Shortlinks

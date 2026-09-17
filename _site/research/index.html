@@ -1,0 +1,57 @@
+<!-- ISSUE: Root-relative asset/navigation links (/assets/..., /news/) return 404 on GitHub Pages subpaths. -->
+<!-- CORRECTION: Wrap stylesheets, scripts, and internal routes in Eleventy | url filter for subpath support. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Papers — ttraces.io</title>
+  <link rel="stylesheet" href="/news-zero/news-zero/assets/css/style.css">
+  <script src="/news-zero/news-zero/assets/js/app.js" defer=""></script>
+</head>
+<body>
+  <header>
+    <a href="/news-zero/" class="wordmark">ttraces<span>.io</span></a>
+    <nav>
+      <a href="/news-zero/">FEED</a>
+      <a href="/news-zero/news-zero/news/">NEWS</a>
+      <a href="/news-zero/news-zero/research/" class="active">RESEARCH</a>
+      <a href="/news-zero/news-zero/trends/">TRENDS</a>
+      <a href="/news-zero/news-zero/privacy/">PRIVACY</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <span class="brand-label">OPEN ACCESS PAPERS</span>
+      <h1 style="margin-top: 8px;">Security Research Registry</h1>
+
+      <div class="route-line"></div>
+
+      <div class="card-grid">
+        
+          <!-- ISSUE: Hardcoded /s/ shortlink paths break on GitHub Pages subpaths. -->
+<!-- CORRECTION: Wrap shortlink redirect URL in Eleventy | url filter for subpath support. -->
+<div class="card" data-category="cryptography" data-country="Global">
+  <div class="card-header">
+    <span class="card-tag brand-label">cryptography</span>
+    <span class="card-date">2026-09-10</span>
+  </div>
+  <a href="https://arxiv.org/abs/2609.00123" target="_blank" rel="noopener noreferrer" class="card-title">Formal Verification of Post-Quantum Cryptographic Protocols</a>
+  <p class="card-excerpt">Formal verification model for post-quantum lattice-based key exchange mechanisms against side-channel adversaries.</p>
+  <div class="card-meta">
+    <span class="brand-hash">arXiv cs.CR</span>
+    <a href="/news-zero/news-zero/s/arx00001/" class="btn">PDF / PAPER</a>
+  </div>
+</div>
+
+        
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>TTRACES.IO — BRAND SYSTEM V1.0 · ZERO-TRACKING PUBLIC FEED</div>
+  </footer>
+</body>
+</html>

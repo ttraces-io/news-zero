@@ -1,21 +1,23 @@
+<!-- ISSUE: Root-relative asset/navigation links (/assets/..., /news/) return 404 on GitHub Pages subpaths. -->
+<!-- CORRECTION: Wrap stylesheets, scripts, and internal routes in Eleventy | url filter for subpath support. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Twice-Daily Trends — ttraces.io</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <script src="/assets/js/app.js" defer></script>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+  <script src="{{ '/assets/js/app.js' | url }}" defer></script>
 </head>
 <body>
   <header>
-    <a href="/" class="wordmark">ttraces<span>.io</span></a>
+    <a href="{{ '/' | url }}" class="wordmark">ttraces<span>.io</span></a>
     <nav>
-      <a href="/">FEED</a>
-      <a href="/news/">NEWS</a>
-      <a href="/research/">RESEARCH</a>
-      <a href="/trends/" class="active">TRENDS</a>
-      <a href="/privacy/">PRIVACY</a>
+      <a href="{{ '/' | url }}">FEED</a>
+      <a href="{{ '/news/' | url }}">NEWS</a>
+      <a href="{{ '/research/' | url }}">RESEARCH</a>
+      <a href="{{ '/trends/' | url }}" class="active">TRENDS</a>
+      <a href="{{ '/privacy/' | url }}">PRIVACY</a>
     </nav>
   </header>
 

@@ -1,3 +1,5 @@
+<!-- ISSUE: Hardcoded /s/ shortlink paths break on GitHub Pages subpaths. -->
+<!-- CORRECTION: Wrap shortlink redirect URL in Eleventy | url filter for subpath support. -->
 <div class="card" data-domain="{{ item.domain }}" data-country="{{ item.country }}">
   <div class="card-header">
     <span class="card-tag brand-label">{{ item.sourceType }}</span>

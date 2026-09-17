@@ -1,0 +1,91 @@
+<!-- ISSUE: Root-relative asset/navigation links (/assets/..., /news/) return 404 on GitHub Pages subpaths. -->
+<!-- CORRECTION: Wrap stylesheets, scripts, and internal routes in Eleventy | url filter for subpath support. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Feed — ttraces.io</title>
+  <link rel="stylesheet" href="/news-zero/news-zero/assets/css/style.css">
+  <script src="/news-zero/news-zero/assets/js/app.js" defer=""></script>
+</head>
+<body>
+  <header>
+    <a href="/news-zero/" class="wordmark">ttraces<span>.io</span></a>
+    <nav>
+      <a href="/news-zero/">FEED</a>
+      <a href="/news-zero/news-zero/news/" class="active">NEWS</a>
+      <a href="/news-zero/news-zero/research/">RESEARCH</a>
+      <a href="/news-zero/news-zero/trends/">TRENDS</a>
+      <a href="/news-zero/news-zero/privacy/">PRIVACY</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <span class="brand-label">VERIFIED SOURCES</span>
+      <h1 style="margin-top: 8px;">Cybersecurity News & Advisories</h1>
+
+      <div class="route-line"></div>
+
+      <!-- ISSUE: Hardcoded 5 select options ignoring 101 entries in countries.json and 35 in categories.json. -->
+<!-- CORRECTION: Dynamically iterate over countries and categories data arrays in Nunjucks template. -->
+<div class="filter-bar">
+  <span class="brand-label">FILTER FEED:</span>
+  <select id="country-select" onchange="applyFilters()">
+    <option value="">All Countries (Global)</option>
+    
+  </select>
+
+  <select id="category-select" onchange="applyFilters()">
+    <option value="">All Categories</option>
+    
+  </select>
+
+  <input type="text" id="search-input" placeholder="SEARCH TITLE / HASH..." onkeyup="applyFilters()">
+</div>
+
+
+      <div class="card-grid">
+        
+          <!-- ISSUE: Hardcoded /s/ shortlink paths break on GitHub Pages subpaths. -->
+<!-- CORRECTION: Wrap shortlink redirect URL in Eleventy | url filter for subpath support. -->
+<div class="card" data-category="vulnerability-management" data-country="US">
+  <div class="card-header">
+    <span class="card-tag brand-label">vulnerability-management</span>
+    <span class="card-date">2026-09-17</span>
+  </div>
+  <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" target="_blank" rel="noopener noreferrer" class="card-title"></a>
+  <p class="card-excerpt">Source: CISA (US)</p>
+  <div class="card-meta">
+    <span class="brand-hash">#cisa001a2b3c4d</span>
+    <a href="/news-zero/news-zero/s/cisa0001/" class="btn">SHARE LINK</a>
+  </div>
+</div>
+
+        
+          <!-- ISSUE: Hardcoded /s/ shortlink paths break on GitHub Pages subpaths. -->
+<!-- CORRECTION: Wrap shortlink redirect URL in Eleventy | url filter for subpath support. -->
+<div class="card" data-category="open-source-security" data-country="Global">
+  <div class="card-header">
+    <span class="card-tag brand-label">open-source-security</span>
+    <span class="card-date">2026-09-16</span>
+  </div>
+  <a href="https://github.blog/category/security/" target="_blank" rel="noopener noreferrer" class="card-title"></a>
+  <p class="card-excerpt">Source: GitHub (Global)</p>
+  <div class="card-meta">
+    <span class="brand-hash">#ghsec001e2f3g4</span>
+    <a href="/news-zero/news-zero/s/ghsec001/" class="btn">SHARE LINK</a>
+  </div>
+</div>
+
+        
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>TTRACES.IO — BRAND SYSTEM V1.0 · ZERO-TRACKING PUBLIC FEED</div>
+  </footer>
+</body>
+</html>

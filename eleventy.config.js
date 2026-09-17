@@ -1,3 +1,5 @@
+// ISSUE: Hardcoded root-relative asset URLs return 404 on GitHub Pages project subpaths (/news-zero/).
+// CORRECTION: Add pathPrefix and wrap asset/nav links with Eleventy | url filter.
 import pluginRss from "@11ty/eleventy-plugin-rss";
 
 export default function (eleventyConfig) {
@@ -41,6 +43,7 @@ export default function (eleventyConfig) {
   });
 
   return {
+    pathPrefix: process.env.PATH_PREFIX || "/news-zero/",
     dir: {
       input: "src",
       output: "_site",

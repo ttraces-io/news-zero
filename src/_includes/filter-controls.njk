@@ -1,21 +1,19 @@
+<!-- ISSUE: Hardcoded 5 select options ignoring 101 entries in countries.json and 35 in categories.json. -->
+<!-- CORRECTION: Dynamically iterate over countries and categories data arrays in Nunjucks template. -->
 <div class="filter-bar">
   <span class="brand-label">FILTER FEED:</span>
   <select id="country-select" onchange="applyFilters()">
     <option value="">All Countries (Global)</option>
-    <option value="US">United States (US)</option>
-    <option value="GB">United Kingdom (GB)</option>
-    <option value="FR">France (FR)</option>
-    <option value="DE">Germany (DE)</option>
-    <option value="EE">Estonia (EE)</option>
+    {% for country in countries %}
+      <option value="{{ country.iso2 }}">{{ country.country }} ({{ country.iso2 }})</option>
+    {% endfor %}
   </select>
 
   <select id="category-select" onchange="applyFilters()">
     <option value="">All Categories</option>
-    <option value="cybersecurity">Cybersecurity</option>
-    <option value="vulnerability-management">Vulnerability Management</option>
-    <option value="zero-trust">Zero Trust</option>
-    <option value="cryptography">Cryptography</option>
-    <option value="open-source-security">Open-Source Security</option>
+    {% for cat in categories %}
+      <option value="{{ cat.id }}">{{ cat.name }}</option>
+    {% endfor %}
   </select>
 
   <input type="text" id="search-input" placeholder="SEARCH TITLE / HASH..." onkeyup="applyFilters()">

@@ -1,0 +1,22 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<!-- ISSUE: Missing XML RSS Feed artifact for subscribers. -->
+<!-- CORRECTION: Create Nunjucks RSS template generating valid RSS feed.xml artifact. -->
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>ttraces.io — Cybersecurity Intelligence Feed</title>
+    <link>https://ttraces-io.github.io/news-zero/</link>
+    <description>Zero-tracking, 60-day freshness verified cybersecurity news and open research paper feed.</description>
+    {% for item in newsPlatforms %}
+    <item>
+      <title>{{ item.name }}</title>
+      <link>{{ item.homepage }}</link>
+      <guid>{{ item.id }}</guid>
+      <pubDate>{{ item.lastValidatedAt }}</pubDate>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

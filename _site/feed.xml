@@ -1,0 +1,25 @@
+<!-- ISSUE: Missing XML RSS Feed artifact for subscribers. -->
+<!-- CORRECTION: Create Nunjucks RSS template generating valid RSS feed.xml artifact. -->
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>ttraces.io — Cybersecurity Intelligence Feed</title>
+    <link>https://ttraces-io.github.io/news-zero/</link>
+    <description>Zero-tracking, 60-day freshness verified cybersecurity news and open research paper feed.</description>
+    
+    <item>
+      <title>CISA Cybersecurity Advisories</title>
+      <link>https://www.cisa.gov/news-events/cybersecurity-advisories</link>
+      <guid>cisa-advisories</guid>
+      <pubDate></pubDate>
+    </item>
+    
+    <item>
+      <title>GitHub Security Disclosures</title>
+      <link>https://github.blog/category/security/</link>
+      <guid>github-blog-security</guid>
+      <pubDate></pubDate>
+    </item>
+    
+  </channel>
+</rss>

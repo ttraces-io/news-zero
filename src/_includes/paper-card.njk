@@ -1,3 +1,5 @@
+<!-- ISSUE: Hardcoded /s/ shortlink paths break on GitHub Pages subpaths. -->
+<!-- CORRECTION: Wrap shortlink redirect URL in Eleventy | url filter for subpath support. -->
 <div class="card" data-category="{{ paper.topics[0] }}" data-country="{{ paper.country }}">
   <div class="card-header">
     <span class="card-tag brand-label">{{ paper.topics[0] }}</span>
@@ -7,6 +9,6 @@
   <p class="card-excerpt">{{ paper.abstract }}</p>
   <div class="card-meta">
     <span class="brand-hash">{{ paper.publisher }}</span>
-    <a href="/s/{{ paper.shortId }}/" class="btn">PDF / PAPER</a>
+    <a href="{{ ('/s/' + paper.shortId + '/') | url }}" class="btn">PDF / PAPER</a>
   </div>
 </div>
